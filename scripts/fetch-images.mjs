@@ -13,6 +13,10 @@ if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
 
 // slug -> Commons search query, hand-picked to bias toward relevant outdoor/home photography
 const TARGETS = [
+  { slug: 'hero-camping', query: 'campsite forest morning', pick: 2 },
+  { slug: 'hero-travel', query: 'packed suitcase luggage', pick: 1 },
+  { slug: 'hero-home', query: 'modern living room sofa', pick: 0 },
+  { slug: 'hero-outdoor', query: 'hiker summit mountain view backpack', pick: 0 },
   { slug: 'best-camping-gear', query: 'camping tent', pick: 7 },
   { slug: 'best-everyday-carry-gear', query: 'rucksack', pick: 3 },
   { slug: 'best-home-organization-products', query: 'pantry shelves organized jars', pick: 0 },
