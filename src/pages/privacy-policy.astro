@@ -1,0 +1,61 @@
+---
+import LegalLayout from '../layouts/LegalLayout.astro';
+import { SITE } from '../lib/site';
+---
+
+<LegalLayout title="Privacy Policy" description="How TrailNestCo collects, uses, and protects your information." path="/privacy-policy" updated="June 1, 2026">
+  <p>
+    This Privacy Policy explains how {SITE.business.legalName} ("{SITE.name}," "we," "us") collects, uses,
+    and discloses information when you visit {SITE.domain}.
+  </p>
+
+  <h2>Information we collect</h2>
+  <ul>
+    <li><strong>Usage data</strong> — pages visited, time on site, referring URLs, and device/browser information, collected via analytics tools.</li>
+    <li><strong>Information you provide</strong> — name and email address if you contact us, subscribe to a newsletter, or submit a pitch.</li>
+    <li><strong>Cookies &amp; similar technologies</strong> — used for analytics, remembering preferences, and measuring affiliate link performance.</li>
+  </ul>
+
+  <h2>How we use information</h2>
+  <ul>
+    <li>To operate, maintain, and improve the site and our content</li>
+    <li>To respond to inquiries sent to our contact addresses</li>
+    <li>To measure which articles and affiliate links perform well, in aggregate and anonymized form</li>
+    <li>To comply with legal obligations</li>
+  </ul>
+
+  <h2>Affiliate links &amp; third parties</h2>
+  <p>
+    When you click an affiliate link, the destination retailer or affiliate network (e.g. Awin, Impact, CJ
+    Affiliate) may set its own cookies and collect data according to its own privacy policy. We encourage
+    you to review the privacy policy of any third-party site you visit. See our
+    <a href="/affiliate-disclosure">Affiliate Disclosure</a> for more detail.
+  </p>
+
+  <h2>Your choices</h2>
+  <p>
+    Most browsers let you block or delete cookies through their settings. Doing so may affect site
+    functionality. Depending on your location, you may have rights to access, correct, or delete personal
+    data we hold about you — contact us to make a request.
+  </p>
+
+  <h2>Data retention &amp; security</h2>
+  <p>
+    We retain contact information only as long as needed to respond to your inquiry or fulfill the purpose
+    it was collected for, and use reasonable technical and organizational measures to protect it.
+  </p>
+
+  <h2>Children's privacy</h2>
+  <p>{SITE.name} is not directed at children under 13, and we do not knowingly collect personal information from them.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>We may update this policy periodically. Material changes will be reflected by an updated "Last updated" date above.</p>
+
+  <h2>Contact</h2>
+  <p>
+    {SITE.business.legalName}<br />
+    {SITE.business.addressFull}<br />
+    <a href={`mailto:${SITE.business.contactEmail}`}>{SITE.business.contactEmail}</a> &middot;
+    <a href={SITE.business.phoneHref}>{SITE.business.phone}</a>
+  </p>
+</LegalLayout>

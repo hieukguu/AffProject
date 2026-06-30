@@ -1,0 +1,60 @@
+---
+import LegalLayout from '../layouts/LegalLayout.astro';
+import { SITE } from '../lib/site';
+---
+
+<LegalLayout title="Terms of Service" description="The terms governing your use of the TrailNestCo website." path="/terms-of-service" updated="June 1, 2026">
+  <p>
+    These Terms of Service ("Terms") govern your access to and use of {SITE.domain} (the "Site"), operated
+    by {SITE.business.legalName}. By using the Site, you agree to these Terms.
+  </p>
+
+  <h2>Use of content</h2>
+  <p>
+    Content on this Site, including articles, images, and graphics, is owned by {SITE.business.legalName}
+    or its licensors and is protected by copyright. You may share links to our content but may not
+    republish, scrape, or redistribute substantial portions without written permission.
+  </p>
+
+  <h2>No professional advice</h2>
+  <p>
+    Our reviews, guides, and recommendations are provided for general informational purposes only. They do
+    not constitute professional, safety, or medical advice. Always follow manufacturer instructions and use
+    appropriate judgment, training, and safety equipment when using outdoor or camping gear.
+  </p>
+
+  <h2>Third-party links</h2>
+  <p>
+    The Site contains links to third-party websites, including affiliate and retailer links, which we do
+    not control. We are not responsible for the content, products, or practices of any linked third-party
+    site.
+  </p>
+
+  <h2>Disclaimer of warranties</h2>
+  <p>
+    The Site and its content are provided "as is" without warranties of any kind, express or implied. While
+    we make reasonable efforts to keep information accurate and current (see our
+    <a href="/fact-checking-policy">Fact-Checking Policy</a>), product specifications, pricing, and
+    availability shown on the Site may change without notice.
+  </p>
+
+  <h2>Limitation of liability</h2>
+  <p>
+    To the fullest extent permitted by law, {SITE.business.legalName} shall not be liable for any indirect,
+    incidental, or consequential damages arising from your use of the Site or reliance on its content,
+    including purchases made through links found on the Site.
+  </p>
+
+  <h2>Changes to these Terms</h2>
+  <p>We may revise these Terms from time to time. Continued use of the Site after changes are posted constitutes acceptance of the revised Terms.</p>
+
+  <h2>Governing law</h2>
+  <p>These Terms are governed by the laws of the State of Delaware, USA, without regard to conflict-of-law principles.</p>
+
+  <h2>Contact</h2>
+  <p>
+    {SITE.business.legalName}<br />
+    {SITE.business.addressFull}<br />
+    <a href={`mailto:${SITE.business.contactEmail}`}>{SITE.business.contactEmail}</a>
+  </p>
+</LegalLayout>

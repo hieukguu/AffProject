@@ -1,0 +1,38 @@
+---
+import LegalLayout from '../layouts/LegalLayout.astro';
+import { SITE } from '../lib/site';
+---
+
+<LegalLayout title="Write for Us" description="Pitch a guide, review, or guest contribution to TrailNestCo." path="/write-for-us">
+  <p>
+    {SITE.name} works with experienced outdoor, home-goods, and travel writers — particularly those with
+    hands-on product testing experience, trade background, or relevant certifications (e.g. guiding,
+    interior design, supply chain). We do not accept pre-written guest posts purely for link placement.
+  </p>
+
+  <h2>What we're looking for</h2>
+  <ul>
+    <li>Hands-on product reviews backed by real testing, not summarized spec sheets</li>
+    <li>Category expertise in camping/backpacking, home organization, travel gear, or outdoor fitness</li>
+    <li>Clear, structured writing with original photography where possible</li>
+    <li>Willingness to follow our <a href="/editorial-policy">editorial process</a> (draft → review → edit → publish)</li>
+  </ul>
+
+  <h2>What we don't accept</h2>
+  <ul>
+    <li>AI-generated drafts submitted without disclosure or editing</li>
+    <li>Paid placements disguised as editorial content</li>
+    <li>Unrelated niches outside {SITE.niche.primary.toLowerCase()}</li>
+  </ul>
+
+  <h2>How to pitch</h2>
+  <p>
+    Email <a href={`mailto:${SITE.business.pitchEmail}`}>{SITE.business.pitchEmail}</a> with:
+  </p>
+  <ol>
+    <li>2–3 writing samples (published links preferred)</li>
+    <li>A one-paragraph pitch for a specific article, including the products you'd cover</li>
+    <li>Any relevant testing experience, certifications, or trade background</li>
+  </ol>
+  <p>Accepted contributors are credited with a full author byline, bio, and expertise tag, consistent with every other writer on this site.</p>
+</LegalLayout>

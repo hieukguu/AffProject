@@ -1,0 +1,39 @@
+---
+import { SITE } from '../lib/site';
+
+interface Props {
+  name: string;
+  url: string;
+  retailer: string;
+  ctaLabel?: string;
+}
+const { name, url, retailer, ctaLabel = 'Check price' } = Astro.props;
+---
+
+{SITE.affiliateLinksEnabled ? (
+  <a
+    href={url}
+    target="_blank"
+    rel="nofollow sponsored noopener"
+    class="not-prose my-5 flex items-center justify-between gap-4 rounded-lg border border-accent-200 bg-accent-50 px-4 py-3 transition-colors hover:bg-accent-100"
+  >
+    <span class="text-sm">
+      <span class="block font-semibold text-ink-900">{name}</span>
+      <span class="text-ink-500">at {retailer}</span>
+    </span>
+    <span class="inline-flex shrink-0 items-center gap-1 rounded-full bg-accent-500 px-4 py-2 text-sm font-semibold text-white">
+      {ctaLabel}
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+  </a>
+) : (
+  <div class="not-prose my-5 flex items-center justify-between gap-4 rounded-lg border border-ink-100 bg-ink-50 px-4 py-3">
+    <span class="text-sm">
+      <span class="block font-semibold text-ink-900">{name}</span>
+      <span class="text-ink-500">at {retailer}</span>
+    </span>
+    <span class="shrink-0 rounded-full border border-ink-200 px-4 py-2 text-sm font-medium text-ink-400">
+      Coming soon
+    </span>
+  </div>
+)}

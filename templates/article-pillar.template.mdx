@@ -1,0 +1,67 @@
+---
+title: "Best {{CATEGORY}} of {{YEAR}}: {{N}}+ Tested Picks"
+slug: "best-{{category-slug}}"
+description: "{{150-165 char description with primary keyword near the start}}"
+type: "pillar"
+tier: 1
+category: "{{camping-outdoor|home-essentials|travel-edc|fitness-outdoor}}"
+tags: ["{{tag1}}", "{{tag2}}", "buying guide"]
+heroImage: "{{image-url}}"
+heroImageAlt: "{{descriptive alt text}}"
+authorSlug: "{{author-slug}}"
+reviewerSlug: "{{senior-editor-slug}}"
+datePublished: {{YYYY-MM-DD}}
+dateUpdated: {{YYYY-MM-DD}}
+editorialStatus: "published"
+factChecked: true
+featured: false
+relatedSlugs: ["{{related-1}}", "{{related-2}}", "{{related-3}}"]
+affiliateProducts:
+  - name: "{{Product Name}}"
+    url: "{{affiliate-url}}"
+    retailer: "{{Retailer}}"
+    ctaLabel: "Check price"
+faq:
+  - question: "{{Common question 1 — pull from People Also Ask}}"
+    answer: "{{2-3 sentence direct answer}}"
+  - question: "{{Common question 2}}"
+    answer: "{{2-3 sentence direct answer}}"
+---
+
+import AffiliateCTA from '../../components/AffiliateCTA.astro';
+import ProsCons from '../../components/ProsCons.astro';
+
+{{Intro: 100-150 words. State the problem the reader has, why this category is confusing/hard to shop for, and what makes this guide trustworthy (who tested it, how).}}
+
+## How we chose these picks
+
+{{Scoring table: criteria + weights, mirrors the rubric in /scripts/score-article.mjs}}
+
+## Best {{subcategory 1}}
+
+{{150-250 words per pick. Lead with the verdict, back it with a specific tested detail (a number, a measured result, a real condition), not generic adjectives.}}
+
+<AffiliateCTA name="{{Product}}" url="{{url}}" retailer="{{Retailer}}" />
+
+## Best {{subcategory 2}}
+
+{{Repeat pattern. Link to a Tier 2 cluster article covering this subcategory in depth.}}
+
+<ProsCons pros={["{{pro 1}}", "{{pro 2}}", "{{pro 3}}"]} cons={["{{con 1}}", "{{con 2}}"]} />
+
+## {{Comparison or "how to choose" table}}
+
+{{A markdown table — pillar pages should have at least one comparison/decision table.}}
+
+## Frequently asked questions
+
+{{Restate each FAQ item as an H3 or bold lead-in, 2-3 sentence answer. Must match the faq[] frontmatter array.}}
+
+<!--
+SCORING TARGETS BEFORE PUBLISH (see /scripts/score-article.mjs):
+- Structure (20): H2/H3 hierarchy, intro, FAQ, table — all present
+- Depth (30): 1500-3000 words, specific tested/verified details, not generic filler
+- SEO (20): primary keyword in title/description/H1/first 100 words, 3+ internal links
+- Trust (30): author + reviewer set, factChecked true, affiliate disclosure present via layout, no unverifiable claims
+Minimum total: 75/100
+-->

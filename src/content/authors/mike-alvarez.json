@@ -1,0 +1,12 @@
+{
+  "name": "Mike Alvarez",
+  "slug": "mike-alvarez",
+  "role": "staff-writer",
+  "title": "Outdoor Gear Tester",
+  "bio": "Mike is a former wilderness guide who field-tests camping, hiking, and survival gear in real conditions across the western US.",
+  "longBio": "Mike Alvarez spent seven years as a backcountry wilderness guide before joining TrailNestCo as a staff Outdoor Gear Tester. He runs TrailNestCo's field-testing program for tents, sleeping systems, cookware, and water filtration, putting every product through multi-night trips before it's scored. Mike holds a Wilderness First Responder certification and contributes the technical durability notes you'll see in TrailNestCo's camping and backpacking reviews.",
+  "expertise": ["Tents & Shelter Systems", "Backpacking Cookware", "Water Filtration"],
+  "avatar": "/authors/mike-alvarez.svg",
+  "email": "mike@trailnestco.com",
+  "joinedYear": 2023
+}

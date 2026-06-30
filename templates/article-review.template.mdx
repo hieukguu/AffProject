@@ -1,0 +1,56 @@
+---
+title: "{{Product/Category}} Review: {{Hook, e.g. 'Tested Across 3 Trips'}}"
+slug: "{{review-slug}}"
+description: "{{150-165 char description}}"
+type: "review"
+tier: 2
+category: "{{camping-outdoor|home-essentials|travel-edc|fitness-outdoor}}"
+tags: ["{{tag1}}", "review"]
+heroImage: "{{image-url}}"
+heroImageAlt: "{{descriptive alt text}}"
+authorSlug: "{{staff-writer-slug}}"
+reviewerSlug: "{{senior-editor-slug}}"
+datePublished: {{YYYY-MM-DD}}
+dateUpdated: {{YYYY-MM-DD}}
+editorialStatus: "published"
+factChecked: true
+pillarSlug: "{{parent-pillar-slug}}"
+relatedSlugs: ["{{parent-pillar-slug}}", "{{sibling-cluster-1}}"]
+affiliateProducts:
+  - name: "{{Product}}"
+    url: "{{affiliate-url}}"
+    retailer: "{{Retailer}}"
+faq:
+  - question: "{{question 1}}"
+    answer: "{{answer}}"
+---
+
+import AffiliateCTA from '../../components/AffiliateCTA.astro';
+import ProsCons from '../../components/ProsCons.astro';
+
+{{Intro: what was tested, how, and why the reader should trust the result. 100-150 words.}}
+
+## Testing methodology
+
+{{Table: what you measured and how — this is what differentiates a real review from a spec-sheet summary.}}
+
+## {{Pick 1 name}} — {{Best for X}}
+
+{{150-250 words with at least one specific measured/observed result.}}
+
+<AffiliateCTA name="{{Product}}" url="{{url}}" retailer="{{Retailer}}" />
+<ProsCons pros={["{{pro}}"]} cons={["{{con}}"]} />
+
+## {{Pick 2 name}} — {{Best for Y}}
+
+{{Repeat.}}
+
+## Comparison table
+
+{{Side-by-side spec table of everything tested.}}
+
+## Frequently asked questions
+
+{{Match faq[] frontmatter.}}
+
+<!-- Min publish score 75/100 — see /scripts/score-article.mjs -->

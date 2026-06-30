@@ -1,0 +1,14 @@
+{
+  "name": "Sarah Nguyen",
+  "slug": "sarah-nguyen",
+  "role": "senior-editor",
+  "title": "Senior Editor",
+  "bio": "Sarah leads TrailNestCo's home-essentials and travel coverage, with a background in consumer product testing and supply-chain sourcing.",
+  "longBio": "Sarah Nguyen is TrailNestCo's Senior Editor, focused on everyday home essentials, travel gear, and EDC (everyday carry) categories. She previously worked as a sourcing analyst for a consumer goods importer, giving her firsthand insight into manufacturing quality, material grades, and pricing structures that most reviewers never see. Sarah reviews every draft for factual accuracy, verifies product specifications against manufacturer documentation, and manages TrailNestCo's relationships with brand contacts for sample and data requests.",
+  "expertise": ["Home Essentials", "Travel Gear", "Product Sourcing & Quality Verification"],
+  "avatar": "/authors/sarah-nguyen.svg",
+  "email": "sarah@trailnestco.com",
+  "twitter": "https://twitter.com/trailnestco",
+  "linkedin": "https://linkedin.com/in/example",
+  "joinedYear": 2022
+}

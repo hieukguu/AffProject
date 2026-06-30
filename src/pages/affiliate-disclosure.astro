@@ -1,0 +1,42 @@
+---
+import LegalLayout from '../layouts/LegalLayout.astro';
+import { SITE } from '../lib/site';
+---
+
+<LegalLayout title="Affiliate Disclosure" description="How TrailNestCo uses affiliate links and how that relates to our editorial recommendations." path="/affiliate-disclosure" updated="June 1, 2026">
+  <p>
+    In accordance with the FTC's Guides Concerning the Use of Endorsements and Testimonials, {SITE.name}
+    discloses the following: this website contains affiliate links. If you click one of these links and
+    make a purchase, {SITE.business.legalName} may receive a commission from the retailer or affiliate
+    network, at no additional cost to you.
+  </p>
+
+  <h2>Which networks we work with</h2>
+  <p>
+    {SITE.name} participates in affiliate programs through networks including Awin, Impact, and CJ
+    Affiliate, as well as individual retailer affiliate programs. The specific program backing any given
+    link may change over time as we add or rotate partners.
+  </p>
+
+  <h2>How this affects our content</h2>
+  <p>
+    Affiliate relationships do not influence which products we choose to test, how we score them, or where
+    they rank in our guides. Our editorial team builds rankings and recommendations before affiliate links
+    are added to a page, following the process described in our <a href="/editorial-policy">Editorial
+    Policy</a>. We link to a product because we believe it's a good fit for the use case described —
+    if a non-affiliate retailer is the best source for a product, we'll link there too.
+  </p>
+
+  <h2>Identifying affiliate links</h2>
+  <p>
+    Buttons such as "Check price," "Visit official site," and "Try free version" are typically affiliate
+    links. Every article that contains affiliate links also displays a short disclosure notice near the
+    top or bottom of the page.
+  </p>
+
+  <h2>Questions</h2>
+  <p>
+    If you have questions about a specific link or our affiliate relationships, contact us at
+    <a href={`mailto:${SITE.business.contactEmail}`}>{SITE.business.contactEmail}</a>.
+  </p>
+</LegalLayout>

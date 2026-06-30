@@ -1,0 +1,40 @@
+---
+import LegalLayout from '../layouts/LegalLayout.astro';
+import { SITE } from '../lib/site';
+---
+
+<LegalLayout title="Fact-Checking Policy" description="The standards TrailNestCo uses to verify specifications, claims, and pricing before publication." path="/fact-checking-policy" updated="June 1, 2026">
+  <p>
+    Accuracy is the foundation of {SITE.name}'s credibility. Every published article passes through a
+    dedicated fact-checking step before it goes live, separate from the original drafting.
+  </p>
+
+  <h2>What we verify</h2>
+  <ul>
+    <li><strong>Specifications</strong> — Dimensions, weight, materials, capacity, and technical claims are checked against the manufacturer's official documentation.</li>
+    <li><strong>Pricing &amp; availability</strong> — Listed prices are checked against the linked retailer at time of publication and re-checked on each update cycle.</li>
+    <li><strong>Comparative claims</strong> — Any statement comparing one product to another ("lighter than," "more durable than") is checked against a documented source — our own testing notes, manufacturer data, or a cited third-party test.</li>
+    <li><strong>Quotes &amp; data</strong> — Any statistic or quote attributed to a study, brand representative, or outside source is linked to its original source where publicly available.</li>
+  </ul>
+
+  <h2>Who checks it</h2>
+  <p>
+    A senior editor — distinct from the article's original writer — performs the fact-check. For
+    camping and outdoor content this is typically <a href="/authors/james-carter">James Carter</a>; for
+    home, travel, and EDC content it is typically <a href="/authors/sarah-nguyen">Sarah Nguyen</a>.
+  </p>
+
+  <h2>Update cadence</h2>
+  <p>
+    Buying guides and reviews are scheduled for re-verification at minimum once a year, and immediately
+    when we're notified a product has been discontinued, recalled, or materially changed. The visible
+    "Updated" date on each article reflects the most recent fact-check pass, not just a cosmetic edit.
+  </p>
+
+  <h2>Reporting an error</h2>
+  <p>
+    Readers can flag a suspected inaccuracy at any time by emailing
+    <a href={`mailto:${SITE.business.editorialEmail}`}>{SITE.business.editorialEmail}</a> with the article
+    URL and the specific claim in question. We aim to investigate and respond within 5 business days.
+  </p>
+</LegalLayout>

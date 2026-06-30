@@ -1,0 +1,31 @@
+---
+import LegalLayout from '../layouts/LegalLayout.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { SITE } from '../lib/site';
+---
+
+<LegalLayout title="Contact Us" description="Get in touch with the TrailNestCo editorial and business team." path="/contact">
+  <p>We'd love to hear from you — whether it's a correction, a press inquiry, a partnership question, or general feedback. Fill out the form below and it'll come straight to our inbox.</p>
+
+  <ContactForm />
+
+  <h2>Business &amp; mailing address</h2>
+  <p>
+    {SITE.business.legalName}<br />
+    {SITE.business.address.line1}<br />
+    {SITE.business.address.city}, {SITE.business.address.region} {SITE.business.address.postalCode}<br />
+    United States
+  </p>
+
+  <h2>Phone</h2>
+  <p><a href={SITE.business.phoneHref}>{SITE.business.phone}</a></p>
+
+  <h2>Email</h2>
+  <ul>
+    <li>General inquiries: <a href={`mailto:${SITE.business.contactEmail}`}>{SITE.business.contactEmail}</a></li>
+    <li>Editorial corrections: <a href={`mailto:${SITE.business.editorialEmail}`}>{SITE.business.editorialEmail}</a></li>
+    <li>Pitches &amp; partnerships: <a href={`mailto:${SITE.business.pitchEmail}`}>{SITE.business.pitchEmail}</a></li>
+  </ul>
+
+  <p>For writer applications, please see our <a href="/write-for-us">Write for Us</a> page instead of emailing directly.</p>
+</LegalLayout>

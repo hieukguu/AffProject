@@ -1,0 +1,14 @@
+{
+  "name": "James Carter",
+  "slug": "james-carter",
+  "role": "editor-in-chief",
+  "title": "Editor-in-Chief",
+  "bio": "James has spent 14 years testing outdoor and home gear for print and digital publications before founding TrailNestCo's editorial standards.",
+  "longBio": "James Carter is the Editor-in-Chief of TrailNestCo. Before joining TrailNestCo, he spent eight years as a gear editor at a national outdoor magazine and five years running product testing for a home-goods retailer's editorial arm. He has personally tested more than 600 pieces of camping, travel, and household equipment, and has hiked sections of the Appalachian Trail, the PCT, and the Pyrenean Haute Route while field-testing gear. James oversees TrailNestCo's editorial standards, sourcing policy, and fact-checking process, and signs off on every buying guide before it ships.",
+  "expertise": ["Camping & Backpacking Gear", "Editorial Standards", "Product Testing Methodology"],
+  "avatar": "/authors/james-carter.svg",
+  "email": "james@trailnestco.com",
+  "twitter": "https://twitter.com/trailnestco",
+  "linkedin": "https://linkedin.com/in/example",
+  "joinedYear": 2022
+}

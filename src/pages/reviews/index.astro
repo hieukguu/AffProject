@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+
+const articles = (await getCollection('articles', (a) => a.data.tier === 2)).sort(
+  (a, b) => b.data.datePublished.getTime() - a.data.datePublished.getTime(),
+);
+
+const categoryLabel: Record<string, string> = {
+  'camping-outdoor': 'Camping & Outdoor Gear',
+  'home-essentials': 'Everyday Home Essentials',
+  'travel-edc': 'Travel & EDC',
+  'fitness-outdoor': 'Fitness & Outdoor Accessories',
+};
+---
+
+<BaseLayout title="Gear Reviews & Comparisons" description="In-depth, hands-on reviews and head-to-head comparisons of camping, outdoor, travel, and home gear." path="/reviews">
+  <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <h1 class="text-3xl font-extrabold text-ink-900">Gear Reviews &amp; Comparisons</h1>
+    <p class="mt-2 max-w-2xl text-ink-500">Hands-on reviews, head-to-head comparisons, and alternative roundups — every product tested or independently researched against manufacturer specs.</p>
+
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {articles.map((a) => (
+        <ArticleCard
+          title={a.data.title}
+          description={a.data.description}
+          href={`/reviews/${a.data.slug}`}
+          image={a.data.heroImage}
+          imageAlt={a.data.heroImageAlt}
+          category={categoryLabel[a.data.category]}
+          type={a.data.type}
+        />
+      ))}
+    </div>
+  </div>
+</BaseLayout>

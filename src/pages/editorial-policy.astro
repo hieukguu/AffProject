@@ -1,0 +1,53 @@
+---
+import LegalLayout from '../layouts/LegalLayout.astro';
+import { SITE } from '../lib/site';
+---
+
+<LegalLayout title="Editorial Policy" description="How TrailNestCo researches, tests, writes, and publishes product guides and reviews." path="/editorial-policy" updated="June 1, 2026">
+  <p>
+    This policy explains how {SITE.name} selects, tests, and publishes the gear guides and reviews on this
+    site. It applies to every article published under our byline, regardless of whether it includes
+    affiliate links.
+  </p>
+
+  <h2>Editorial independence</h2>
+  <p>
+    Our editorial team has full and final authority over which products are covered, how they are scored,
+    and what is published. Affiliate partners, brands, and advertisers have no influence over our rankings,
+    ratings, or recommendations. We do not accept payment in exchange for positive coverage, and we do not
+    allow brands to review or approve articles before publication.
+  </p>
+
+  <h2>Our workflow</h2>
+  <ol>
+    <li><strong>Draft</strong> — A staff writer with category expertise researches the product category, tests products hands-on where possible, and writes the initial draft.</li>
+    <li><strong>Review</strong> — A senior editor checks the draft for factual accuracy, verifies specifications against manufacturer documentation, and confirms pricing and availability.</li>
+    <li><strong>Edited</strong> — The senior editor edits for clarity, structure, and adherence to our style guide.</li>
+    <li><strong>Published</strong> — The Editor-in-Chief signs off and the article goes live with full author and reviewer attribution.</li>
+    <li><strong>Updated</strong> — Articles are revisited on a regular schedule (or sooner if a product is discontinued or a major price change occurs) and the "last updated" date is revised accordingly.</li>
+  </ol>
+
+  <h2>How we test</h2>
+  <p>
+    Where possible, our team purchases or otherwise obtains products for hands-on testing under real-world
+    conditions — multi-night camping trips, household use over several weeks, or comparable field testing.
+    When hands-on testing isn't feasible for every item in a roundup, we supplement with verified
+    manufacturer specifications, owner/expert interviews, and analysis of long-term user feedback. We
+    indicate within each article when a product was hands-on tested versus desk-researched.
+  </p>
+
+  <h2>Author and reviewer attribution</h2>
+  <p>
+    Every article displays its writer, expertise tags, and the senior editor who fact-checked it, along
+    with publish and last-updated dates. Full bios are available on each <a href="/about">author's page</a>.
+  </p>
+
+  <h2>Corrections</h2>
+  <p>
+    If you spot an error, please contact us at <a href={`mailto:${SITE.business.editorialEmail}`}>{SITE.business.editorialEmail}</a>.
+    We investigate every report and correct verified errors promptly, noting significant corrections in the
+    article's update history.
+  </p>
+
+  <p>See also our <a href="/fact-checking-policy">Fact-Checking Policy</a> and <a href="/affiliate-disclosure">Affiliate Disclosure</a>.</p>
+</LegalLayout>

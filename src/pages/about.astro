@@ -1,0 +1,52 @@
+---
+import LegalLayout from '../layouts/LegalLayout.astro';
+import { SITE } from '../lib/site';
+---
+
+<LegalLayout title="About TrailNestCo" description="Learn who's behind TrailNestCo, our mission, and how we test the gear we recommend." path="/about">
+  <p>
+    {SITE.name} is an independent media publication covering {SITE.niche.primary.toLowerCase()} —
+    from camping and backpacking equipment to the everyday home essentials that make daily life easier.
+    We were founded in {SITE.founded} on a simple idea: gear advice should come from people who actually
+    use the products, not from whoever pays the highest commission.
+  </p>
+
+  <h2>Our mission</h2>
+  <p>
+    The outdoor and home-goods market is flooded with thin "best of" listicles that are never tested and
+    rarely updated. {SITE.name} exists to be the opposite: a small team of editors and category specialists
+    who test gear in real conditions, verify specifications against manufacturer documentation, and update
+    our guides when products change or go out of stock.
+  </p>
+
+  <h2>What we cover</h2>
+  <ul>
+    {SITE.niche.sub.map((s) => <li>{s.label}</li>)}
+  </ul>
+
+  <h2>Our team</h2>
+  <p>
+    {SITE.name} is led by Editor-in-Chief <a href="/authors/james-carter">James Carter</a> and Senior Editor
+    <a href="/authors/sarah-nguyen"> Sarah Nguyen</a>, supported by category specialists including
+    <a href="/authors/mike-alvarez"> Mike Alvarez</a> (outdoor gear) and
+    <a href="/authors/laura-bennett"> Laura Bennett</a> (home &amp; travel). Every contributor's full bio,
+    expertise, and published work is listed on their author page.
+  </p>
+
+  <h2>How we make money</h2>
+  <p>
+    {SITE.name} is reader-supported. When you click an affiliate link and make a purchase, we may earn a
+    commission from the retailer at no additional cost to you. This revenue funds our testing and editorial
+    operations. It never determines which products we recommend or how we rank them — see our
+    <a href="/editorial-policy">Editorial Policy</a> and <a href="/affiliate-disclosure">Affiliate Disclosure</a>
+    for the specifics.
+  </p>
+
+  <h2>Get in touch</h2>
+  <p>
+    {SITE.business.legalName}<br />
+    {SITE.business.addressFull}<br />
+    Phone: <a href={SITE.business.phoneHref}>{SITE.business.phone}</a><br />
+    Email: <a href={`mailto:${SITE.business.contactEmail}`}>{SITE.business.contactEmail}</a>
+  </p>
+</LegalLayout>

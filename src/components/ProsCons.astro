@@ -1,0 +1,32 @@
+---
+interface Props {
+  pros: string[];
+  cons: string[];
+}
+const { pros, cons } = Astro.props;
+---
+
+<div class="not-prose my-6 grid gap-4 sm:grid-cols-2">
+  <div class="rounded-lg border border-brand-200 bg-brand-50 p-4">
+    <h4 class="mb-2 text-sm font-bold text-brand-800">Pros</h4>
+    <ul class="space-y-1.5 text-sm text-ink-700">
+      {pros.map((item) => (
+        <li class="flex items-start gap-2">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="mt-0.5 shrink-0 text-brand-600" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+  <div class="rounded-lg border border-accent-200 bg-accent-50 p-4">
+    <h4 class="mb-2 text-sm font-bold text-accent-700">Cons</h4>
+    <ul class="space-y-1.5 text-sm text-ink-700">
+      {cons.map((item) => (
+        <li class="flex items-start gap-2">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="mt-0.5 shrink-0 text-accent-600" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>

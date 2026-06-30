@@ -1,0 +1,12 @@
+{
+  "name": "Laura Bennett",
+  "slug": "laura-bennett",
+  "role": "staff-writer",
+  "title": "Home & Travel Reviewer",
+  "bio": "Laura covers home organization, kitchen, and travel-gear categories, testing products in her own household before they're rated.",
+  "longBio": "Laura Bennett is TrailNestCo's Home & Travel Reviewer, covering home organization, kitchen tools, luggage, and everyday-carry gear. She holds a background in interior design and spent three years writing product comparisons for a home-goods marketplace. Laura tests every product in real household use for a minimum of two weeks before publishing a review, and maintains TrailNestCo's internal scoring rubric for durability, ease of use, and value.",
+  "expertise": ["Home Organization", "Kitchen & Household Goods", "Travel & EDC Gear"],
+  "avatar": "/authors/laura-bennett.svg",
+  "email": "laura@trailnestco.com",
+  "joinedYear": 2023
+}
