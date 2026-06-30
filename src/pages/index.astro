@@ -27,25 +27,34 @@ function hrefFor(a: (typeof all)[number]) {
 ---
 
 <BaseLayout title={`${SITE.name} — ${SITE.tagline}`} description={SITE.description} path="/" schema={organizationSchema()}>
-  <section class="border-b border-ink-100 bg-gradient-to-b from-brand-50 to-white">
-    <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-      <p class="mb-3 text-sm font-semibold uppercase tracking-wide text-brand-600">{SITE.niche.primary}</p>
-      <h1 class="max-w-2xl text-4xl font-extrabold leading-tight text-ink-900 sm:text-5xl">
+  <section class="relative overflow-hidden border-b border-ink-100">
+    <img
+      src="/images/best-camping-gear.jpg"
+      alt=""
+      class="absolute inset-0 h-full w-full object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-950/90 via-brand-900/80 to-brand-900/55"></div>
+
+    <div class="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
+      <p class="mb-3 text-sm font-semibold uppercase tracking-wide text-brand-200">{SITE.niche.primary}</p>
+      <h1 class="max-w-2xl text-4xl font-extrabold leading-tight text-white sm:text-5xl">
         Real gear, tested in real life — not sponsored hype.
       </h1>
-      <p class="mt-4 max-w-xl text-lg text-ink-600">
+      <p class="mt-4 max-w-xl text-lg text-brand-50/90">
         {SITE.name} reviews camping, outdoor, travel, and everyday home gear so you can buy once and buy right.
         Every recommendation is independently tested or rigorously researched by our editorial team.
       </p>
       <div class="mt-8 flex flex-wrap gap-3">
-        <a href="/best-camping-gear" class="rounded-full bg-brand-700 px-6 py-3 text-sm font-semibold text-white hover:bg-brand-800">
+        <a href="/best-camping-gear" class="rounded-full bg-accent-500 px-6 py-3 text-sm font-semibold text-white hover:bg-accent-600">
           Best Camping Gear of {new Date().getFullYear()}
         </a>
-        <a href="/reviews" class="rounded-full border border-ink-200 px-6 py-3 text-sm font-semibold text-ink-700 hover:border-brand-300 hover:text-brand-700">
+        <a href="/reviews" class="rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:border-white hover:bg-white/10">
           Browse all reviews
         </a>
       </div>
-      <div class="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-xs text-ink-500">
+      <div class="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-xs text-brand-50/80">
         <span>✓ Independently tested</span>
         <span>✓ Editorially reviewed by 2+ editors</span>
         <span>✓ Affiliate links never influence rankings</span>
