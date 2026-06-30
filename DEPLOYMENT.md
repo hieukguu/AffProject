@@ -1,5 +1,25 @@
 # Deployment Guide
 
+## Auto-deploy via GitHub Actions (recommended)
+
+`.github/workflows/deploy.yml` builds the site and FTP-uploads `dist/` to Hostinger on every push to
+`main`. Set it up once:
+
+1. In Hostinger **hPanel → Files → FTP Accounts**, note (or create) an FTP account: host, username,
+   password, and the target directory (usually `/public_html/` — or `/public_html/yoursubdomain/` if
+   the domain is an addon/subdomain).
+2. On GitHub, go to the repo → **Settings → Secrets and variables → Actions → New repository secret**
+   and add:
+   - `FTP_SERVER` — the FTP host (e.g. `ftp.trailnestco.com` or an IP Hostinger gives you)
+   - `FTP_USERNAME` — the FTP username
+   - `FTP_PASSWORD` — the FTP password
+   - `FTP_SERVER_DIR` (optional) — only needed if your target folder isn't `/public_html/`
+3. Push to `main`. Check the **Actions** tab on GitHub to watch the build/deploy run.
+4. Every subsequent `git push` to `main` automatically rebuilds and redeploys — no manual upload needed.
+
+Never put FTP credentials directly in the workflow file or commit them — GitHub Secrets are encrypted
+and only injected at runtime.
+
 ## Before you deploy — replace placeholders
 
 Everything brand/business-identity related lives in **`src/lib/site.ts`**. Update it before going live:
