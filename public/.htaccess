@@ -1,0 +1,33 @@
+# TrailNestCo — Apache/LiteSpeed config for static Astro export
+
+# ── Canonical host: force non-www -> www, and force HTTPS ──────────────────
+RewriteEngine On
+
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+RewriteCond %{HTTP_HOST} ^trailnestco\.com$ [NC]
+RewriteRule ^ https://www.trailnestco.com%{REQUEST_URI} [L,R=301,NE]
+
+# ── Security headers ────────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+# ── Caching for static assets (Core Web Vitals) ─────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# ── Custom 404 ───────────────────────────────────────────────────────────────
+ErrorDocument 404 /404.html
