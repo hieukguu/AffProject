@@ -56,7 +56,7 @@ export const SITE = {
   // Static site, no backend — contact form submissions post to Formspree (free tier: 50/mo).
   // Sign up at https://formspree.io, create a form pointed at your contact inbox, and replace
   // this with your real endpoint (https://formspree.io/f/xxxxxxxx) before going live.
-  contactFormEndpoint: 'https://formspree.io/f/YOUR_FORM_ID',
+  contactFormEndpoint: 'https://formspree.io/f/xlgywbjn',
 } as const;
 
 export type NicheSlug = (typeof SITE.niche.sub)[number]['slug'];
