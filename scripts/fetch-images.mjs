@@ -29,6 +29,10 @@ const TARGETS = [
   { slug: 'how-to-choose-a-sleeping-bag', query: 'sleeping bag tent camping inside', pick: 3 },
   { slug: 'car-camping-checklist', query: 'campground tent car', pick: 0 },
   { slug: 'how-to-waterproof-gear', query: 'rain jacket hiking', pick: 2 },
+  // 2026-07-01 batch
+  { slug: 'best-headlamps-camping', query: 'headlamp night hiker trail', pick: 4 },
+  { slug: 'best-travel-backpack-carry-on', query: 'hiker backpack journey trail', pick: 0 },
+  { slug: 'how-to-pack-a-backpack', query: 'hiking backpack gear outdoor', pick: 2 },
 ];
 
 async function searchCommons(query) {
