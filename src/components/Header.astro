@@ -5,6 +5,7 @@ const nav = [
   { label: 'Camping & Outdoor', href: '/best-camping-gear' },
   { label: 'Home Essentials', href: '/best-home-organization-products' },
   { label: 'Travel & EDC', href: '/best-everyday-carry-gear' },
+  { label: 'All Reviews', href: '/reviews' },
   { label: 'Guides', href: '/guides' },
   { label: 'About', href: '/about' },
 ];
@@ -12,57 +13,78 @@ const nav = [
 const path = Astro.url.pathname;
 ---
 
-<header class="sticky top-0 z-40 border-b border-ink-100 bg-white/95 backdrop-blur">
-  <div class="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-4 sm:px-8 sm:py-5">
-    <a href="/" class="flex items-center gap-3">
-      <img src={SITE.logoIcon} alt="" width="52" height="52" class="h-12 w-12 sm:h-14 sm:w-14" />
-      <span class="text-2xl font-bold tracking-tight text-brand-800 sm:text-3xl">{SITE.name}</span>
-    </a>
-
-    <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
-      {nav.map((item) => (
-        <a
-          href={item.href}
-          class:list={[
-            'text-base font-medium transition-colors hover:text-brand-700',
-            path === item.href ? 'text-brand-700' : 'text-ink-600',
-          ]}
-        >
-          {item.label}
-        </a>
-      ))}
-    </nav>
-
-    <div class="flex items-center gap-3">
-      <a
-        href="/best-camping-gear"
-        class="hidden rounded-full bg-brand-700 px-5 py-2.5 text-base font-semibold text-white transition-colors hover:bg-brand-800 sm:inline-block"
-      >
-        Top Picks
+<header class="sticky top-0 z-40 bg-white shadow-sm">
+  <!-- Row 1: Logo + CTA -->
+  <div class="border-b border-ink-100">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+      <a href="/" class="flex items-center gap-3 group">
+        <img src={SITE.logoIcon} alt={SITE.name} width="44" height="44" class="h-10 w-10 transition-opacity group-hover:opacity-85" />
+        <div>
+          <span class="block text-[22px] font-black leading-none tracking-tight text-brand-800 sm:text-2xl">{SITE.name}</span>
+          <span class="hidden text-[10px] font-semibold uppercase tracking-[0.15em] text-ink-400 sm:block mt-0.5">{SITE.tagline}</span>
+        </div>
       </a>
-      <button
-        id="mobile-menu-btn"
-        class="inline-flex h-11 w-11 items-center justify-center rounded-md border border-ink-200 text-ink-700 lg:hidden"
-        aria-label="Open menu"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-      >
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-        </svg>
-      </button>
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a
+          href="/best-camping-gear"
+          class="hidden items-center gap-1.5 rounded-full bg-brand-700 px-4 py-1.5 text-sm font-semibold text-white transition-colors hover:bg-brand-800 sm:inline-flex"
+        >
+          Top Picks
+        </a>
+        <button
+          id="mobile-menu-btn"
+          class="inline-flex h-9 w-9 items-center justify-center rounded-md text-ink-600 hover:bg-ink-50 lg:hidden"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 
-  <nav id="mobile-menu" class="hidden border-t border-ink-100 px-4 py-3 lg:hidden" aria-label="Mobile">
-    <ul class="flex flex-col gap-1">
+  <!-- Row 2: Category nav strip (desktop) -->
+  <div class="border-b border-ink-100 bg-white hidden lg:block">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <nav class="flex" aria-label="Primary">
+        {nav.map((item) => (
+          <a
+            href={item.href}
+            class:list={[
+              'whitespace-nowrap border-b-2 px-3.5 py-3 text-[13px] font-semibold transition-colors',
+              path === item.href || (item.href !== '/' && path.startsWith(item.href))
+                ? 'border-brand-700 text-brand-800'
+                : 'border-transparent text-ink-500 hover:border-ink-300 hover:text-ink-900',
+            ]}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <nav id="mobile-menu" class="hidden border-b border-ink-100 bg-white px-4 py-2 lg:hidden" aria-label="Mobile">
+    <ul class="flex flex-col">
       {nav.map((item) => (
         <li>
-          <a href={item.href} class="block rounded-md px-2 py-2 text-sm font-medium text-ink-700 hover:bg-ink-50">
+          <a
+            href={item.href}
+            class="block rounded-md px-3 py-2.5 text-sm font-medium text-ink-700 hover:bg-ink-50"
+          >
             {item.label}
           </a>
         </li>
       ))}
+      <li class="mt-2 border-t border-ink-100 pt-2">
+        <a href="/best-camping-gear" class="block rounded-full bg-brand-700 px-4 py-2.5 text-center text-sm font-semibold text-white">
+          Top Picks →
+        </a>
+      </li>
     </ul>
   </nav>
 </header>
